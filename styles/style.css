@@ -1,0 +1,24 @@
+.centered {
+    position: relative;
+    width: 80%;
+    height: 90vh;
+    margin: auto;
+    /* border: 1px solid black; */
+}
+
+.texto {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: gold;
+    text-shadow: -3px 2px 3px rgb(171, 168, 168);
+    /* border: 1px solid black; */
+}
+
+.frase > p#frase {
+    text-align: center;
+}
