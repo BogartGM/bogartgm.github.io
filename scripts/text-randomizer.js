@@ -1,3 +1,5 @@
+let usedIndexes = []; // Registro de índices utilizados
+
 function selectRandomPhrase(archivo) {
     fetch(archivo)
         .then(response => {
@@ -8,8 +10,20 @@ function selectRandomPhrase(archivo) {
         })
         .then(data => {
             let lineas = data.split('\n');
-            let lineaAleatoria = lineas[Math.floor(Math.random() * lineas.length)];
 
+            // Verificar si se han utilizado todos los índices, en cuyo caso, restablecer el registro
+            if (usedIndexes.length === lineas.length) {
+                usedIndexes = [];
+            }
+
+            let index;
+            do {
+                index = Math.floor(Math.random() * lineas.length);
+            } while (usedIndexes.includes(index)); // Evitar índices repetidos
+
+            usedIndexes.push(index); // Registrar el nuevo índice utilizado
+
+            let lineaAleatoria = lineas[index];
             putPhraseInBox('frase', lineaAleatoria);
         })
         .catch(error => {
