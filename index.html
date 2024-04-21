@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Generador de amor</title>
     <link rel="stylesheet" href="/styles/style.css" />
-    
   </head>
   <body>
+    <div id="overlay">
+      <img src="./assets/pichi.png" alt="Explosión" id="explosion" />
+    </div>
     <!-- <img src="/assets/furina-1.png" alt="happy furina" width="30px" /> -->
     <div class="flex-container">
       <div class="texto">
@@ -17,11 +19,11 @@
 
     <div class="flex-container footer-flex-container">
       <div class="change" id="before"><p>&lt;&lt;</p></div>
-      <div><p class="heart">❤️</p></div>
+      <div><p class="heart" id="explotar">❤️</p></div>
       <div class="change" id="next"><p>&gt;&gt;</p></div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="/scripts/text-randomizer.js"></script>
   </body>
 </html>

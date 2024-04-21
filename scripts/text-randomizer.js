@@ -59,5 +59,34 @@ document.getElementById("next").addEventListener("click", (e) => {
 
 document.addEventListener("DOMContentLoaded", (e) => {
   selectRandomPhrase("/frases.txt", "next");
-});
 
+  var trigger = document.getElementById("explotar");
+  var explosion = document.getElementById("explosion");
+  var overlay = document.getElementById("overlay");
+  var isAnimating = false;
+
+  trigger.addEventListener("click", function() {
+    if (!isAnimating) {
+      isAnimating = true;
+      overlay.style.display = "block";
+      gsap.to(explosion, {
+        duration: 1,
+        scale: 10,
+        opacity: 0,
+        ease: "power4.inOut",
+        onComplete: function() {
+          overlay.style.display = "none";
+          // Restablecer la imagen a su tamaño original y opacidad
+          gsap.set(explosion, { scale: 1, opacity: 1 });
+          isAnimating = false;
+          if (explosion.getAttribute("src") == "./assets/pichi.png") {
+            explosion.setAttribute("src", "./assets/Lorenzo.png");
+          } else {
+            explosion.setAttribute("src", "./assets/pichi.png");
+          }
+          explosion.attributes.src = ""
+        }
+      });
+    }
+  });
+});
