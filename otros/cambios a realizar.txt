@@ -1,0 +1,17 @@
+[Listo] Los productos deben poder modificarse el precio y el nombre
+[Listo] El input de calidad debe de ir al lado izquierdo del producto
+[Listo]Añadir un botón de añadir al lado derecho de la tarjeta del producto
+
+[] Añadir un label de posición al lado de la tarjeta de producto
+
+[] Poder seleccionar el json de una lista de útiles y apartir de esta se pueda generar otrs
+
+[] ARRIBA DE DONDE DICE VER IMAGEN, QUE ALLÍ APAREZCA EL TOTAL
+
+[] Poder desmarcar una caildad en caso de que no haya producto
+
+[] Poder añadir un nuevo producto y que se añada al div.productos
+
+[] Formulario de datos de clientes
+
+[] Mensaje de felicitación para obtener sexo

@@ -1,0 +1,45 @@
+header {
+  height: 8vh;
+}
+
+div.d-grid div.border {
+  height: 89vh;
+}
+
+/* Estilo para la zona de soltar elementos */
+.dropzone {
+  border: 3px dashed #ccc;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.3s ease-in-out; /* Transición suave para el color del borde */
+  animation: tilt-shaking 0.5s 5; /* Animación para sacudir */
+  height: 80vh;
+}
+
+/* Estilos cuando el cursor está sobre la zona de soltar elementos */
+.dropzone:hover {
+  border-width: 3px;
+  border-style: solid;
+  border-color: #397e58;
+  color: #2a724a;
+}
+
+/* Animación para sacudir */
+@keyframes tilt-shaking {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  } /* Inicio y fin */
+  25% {
+    transform: rotate(0.5deg);
+    border-color: #3f969a;
+  } /* Cambio de color */
+  50% {
+    transform: rotate(0deg);
+  } /* Otro color */
+  75% {
+    transform: rotate(-0.5deg);
+    border-color: #12f377;
+  } /* Otro más */
+}
