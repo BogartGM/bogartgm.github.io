@@ -4,5 +4,6 @@ export const Elements = {
     inputRentPrice: document.getElementById("rent-price"),
     btnRentar: document.getElementById("rentar"),
     inputComputerName: document.getElementById("computer-name"),
-    temporizadores: document.getElementById("temporizadores")
+    temporizadores: document.getElementById("temporizadores"),
+    btnPanico: document.getElementById("panico")
 };
