@@ -1,5 +1,4 @@
-"use strict";
-function createHtml(values) {
+export function createHtml(values) {
     const template = document.createElement('template');
     template.innerHTML = `
     <div class="container border rounded-2">
@@ -76,7 +75,7 @@ function createHtml(values) {
   `;
     return template.content.firstElementChild;
 }
-function startCountdown(element, tiempoPedido, rentPrice, onStop) {
+export function startCountdown(element, tiempoPedido, rentPrice, onStop) {
     const tiempoRestanteInput = element.querySelector('#tiempo-restante');
     const tiempoTranscurridoInput = element.querySelector('#tiempo-transcurrido');
     const cobrarInput = element.querySelector('#cobrar');
