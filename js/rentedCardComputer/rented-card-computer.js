@@ -90,7 +90,7 @@ export function startCountdown(element, tiempoPedido, rentPrice, onStop) {
     let tiempoPedidoTotalSeconds = parseTime(tiempoPedido).totalSeconds;
     let intervalId;
     let isPaused = false;
-    const rentPricePerMinute = 60 / parseFloat(rentPrice.replace('$', ''));
+    const rentPricePerMinute = parseFloat(rentPrice.replace('$', '')) / 60;
     // Restablecer el valor inicial del tiempo restante a 0
     tiempoRestanteInput.value = formatTime(0);
     const updateTimer = () => {
