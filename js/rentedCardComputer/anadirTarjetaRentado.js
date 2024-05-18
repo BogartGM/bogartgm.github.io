@@ -5,7 +5,7 @@ export function anadirTarjetaRentado() {
     // Ejemplo de uso
     console.log(Elements.inputRentPrice.value);
     const formValues = {
-        computerName: "Computadora 1",
+        computerName: `${Elements.inputComputerName.value}`,
         rentPrice: `$${Elements.inputRentPrice.value}`,
         tiempoPedido: `${Elements.inputHourSelector.value}:${Elements.inputMinuteSelector.value}:00`,
     };
