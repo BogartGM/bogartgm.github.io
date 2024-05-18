@@ -65,13 +65,13 @@ export function createHtml(values) {
             <label for="cobrar">Cobrar</label>
           </div>
         </div>
-        <div class="col-md d-flex align-items-center bg-warning">
-          <div id="pause-button" class="text-center text-light w-100">
+        <div class="col-md d-flex align-items-center bg-warning p-0">
+          <div id="pause-button" class="text-center text-light w-100 h-100">
             Pausar
           </div>
         </div>
-        <div class="col-md d-flex align-items-center bg-danger rounded-end-2">
-          <div id="stop-button" class="text-center text-light w-100">
+        <div class="col-md d-flex align-items-center bg-danger rounded-end-2 p-0">
+          <div id="stop-button" class="text-center text-light w-100 h-100">
             Detener
           </div>
         </div>
@@ -123,22 +123,6 @@ export function startCountdown(element, tiempoPedido, rentPrice, onStop) {
         pauseTimer();
         onStop();
     };
-    (_a = pauseButton.parentElement) === null || _a === void 0 ? void 0 : _a.addEventListener('click', () => {
-        var _a, _b, _c, _d;
-        if (isPaused) {
-            startTimer();
-            (_a = pauseButton.parentElement) === null || _a === void 0 ? void 0 : _a.classList.remove("bg-success");
-            (_b = pauseButton.parentElement) === null || _b === void 0 ? void 0 : _b.classList.add("bg-warning");
-            pauseButton.textContent = 'Pausar';
-        }
-        else {
-            pauseTimer();
-            (_c = pauseButton.parentElement) === null || _c === void 0 ? void 0 : _c.classList.add("bg-success");
-            (_d = pauseButton.parentElement) === null || _d === void 0 ? void 0 : _d.classList.remove("bg-warning");
-            pauseButton.textContent = 'Reanudar';
-        }
-        isPaused = !isPaused;
-    });
     pauseButton.addEventListener('click', () => {
         var _a, _b, _c, _d;
         if (isPaused) {
