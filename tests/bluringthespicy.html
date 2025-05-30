@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lili 2</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            min-height: 100vh;
+            min-width: 100vw;
+            overflow: hidden;
+        }
+        .background {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            background: url('ss.png') center center/cover no-repeat;
+        }
+        .background-blur {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+            pointer-events: none;
+            backdrop-filter: blur(80px);
+            -webkit-backdrop-filter: blur(80px);
+            mask-image: var(--mask, none);
+            -webkit-mask-image: var(--mask, none);
+            transition: mask-image 0.1s, -webkit-mask-image 0.1s;
+        }
+        .content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-shadow: 0 2px 8px #000;
+            text-align: center;
+            margin-top: 10vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="background-blur"></div>
+    <div class="content">
+        <h1>Ver</h1>
+        <p>Solo ve lo que quieras ver</p>
+    </div>
+    <script>
+        const blur = document.querySelector('.background-blur');
+        document.addEventListener('mousemove', e => {
+            const size = 200; // diameter of the clear circle in px
+            const x = e.clientX;
+            const y = e.clientY;
+            const mask = `radial-gradient(circle ${size/2}px at ${x}px ${y}px, transparent 0%, transparent 60%, black 100%)`;
+            blur.style.setProperty('--mask', mask);
+        });
+        // Set initial mask at center
+    </script>
+</body>
+</html>
